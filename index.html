@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>7 Owls Sellers</title>
+  <link rel="icon" href="icon.ico.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="icon.ico.jpg" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+<!-- 🔐 LOGIN -->
+
+<div id="loginBox" class="sec">
+  <h2>Enter Password</h2>
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="app" class="hidden">
+<h1> Snack Inventory & Sales </h1>
+
+<!-- ADD / UPDATE ITEM -->
+<div class="section">
+  <h2> Add / Update Item</h2>
+  <input id="newItemName" placeholder="Item Name" size="50">
+  <input id="newItemQty" type="number" placeholder="Quantity" width="50">
+  <button onclick="addOrUpdateItem()">Add / Update</button>
+</div>
+
+<table id="inventoryTable">
+<thead>
+<tr>
+  <th>Item</th>
+  <th>Available Qty</th>
+  <th>Sell Qty</th>
+  <th>Buyer</th>
+  <th>Amount (₹)</th>
+  <th>Action</th>
+</tr>
+</thead>
+<tbody></tbody>
+<tfoot>
+<tr style="font-weight:bold;">
+  <td colspan="5">Total Sale (₹)</td>
+  <td id="totalSale">0</td>
+</tr>
+</tfoot>
+</table>
+
+<div style="text-align:center;">
+  <button onclick="sellAll()">Sell</button>
+  <button onclick="undoLast()">Undo</button>
+</div>
+
+<div class="section">
+  <h2>View Sales By Date</h2>
+  <input type="date" id="dateFilter">
+  <button onclick="filterByDate()">View</button>
+  <h3>🧾 Purchase Log</h3>
+  <ul id="purchaseLog"></ul>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
