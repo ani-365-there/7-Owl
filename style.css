@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 0 0 10px #00ff00;
 }
 .sec {
     background: rgba(255, 255, 255, 0.2);
@@ -30,6 +31,27 @@ body {
     gap: 10px;
     
 }
+.sell-btn{
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+.sell-btn:hover{
+  background-color: rgba(3, 112, 3, 0.819);
+  color: white;
+  border-radius: 5px;
+}
+
+.undo-btn{
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+}
+.undo-btn:hover{
+  background-color: rgba(239, 167, 31, 0.844);
+  color: white;
+  border-radius: 5px;
+}
 h1, h2, h3 { text-align:center; }
 table 
 {
@@ -43,7 +65,7 @@ table
     border-collapse: collapse; 
     margin-top:20px; 
     margin-bottom: 20px;
-    background:transparent;
+    background: teal;
     border-radius: 2%;
     box-shadow: 5px 5px 15px 5px #111010;
 }
@@ -102,7 +124,9 @@ button
     cursor:pointer; 
     font: size 5px; 
     margin:4px; 
+   
 }
+
 .section 
 {
     background: rgba(255, 255, 255, 0.2);
@@ -123,11 +147,22 @@ button
     display: flex;
     align-items: center;
     gap: 10px;
+   
 }
 
 .delete-btn { 
-    background:#070302; 
+    background:#ff0000; 
     color:#fff; 
     border:solid,2px;
     border-radius: 10%;
+}
+.delete-btn:hover{ 
+    background:#d70b0bbb; 
+    color:#fff; 
+    border:solid,2px;
+    border-radius: 10%;
+}
+.inventoryTable{
+    background-color: #ff3399;
+    border-radius: 5px;
 }
